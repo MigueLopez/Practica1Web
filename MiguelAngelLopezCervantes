@@ -1,0 +1,15 @@
+Como hacer que GIT ignore algunos archivos al momento de hacer add
+
+1. Crear un archivo de nombre ".gitignore"
+2. Escribir en la primera línea del archivo lo siguiente: "$ cat .gitignore"
+3. En las siguientes lineas del archivo escribir los patrones de los archivos que se se quieren ignorar al hacer el add
+
+Ejemplos:
+ - *.txt       > ignora los archivos con extención txt
+ - Directorio/ > ignora completamente el directorio especificado
+ - *.[abc]     > ignora los archivos con extenciones a,b o c
+ - dir/*.c     > ignora los archivos C en el directiorio especificado, pero no los archivos C que se encuentren en subdirectorios del mismo
+
+Se pueden poner comentarios en el archivo .gitignore anteponiendo el caracter # en la linea de comentario
+
+4. Para que el repositorio empieze a ignorar los archivos especificados en el archivo .gitignore se debe agregar este archivo al repositorio ($ git add .gitignore) y ($ git commit -m "mensaje")
